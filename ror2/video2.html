@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{margin: 0;padding: 0;}
+		</style>
+	</head>
+	<body>
+		<div style="background-color: wheat;height: 936px;width: 100%;">
+		<div style="text-align: center;">
+		<div><s><b>占位符</b></s></div>
+		<video style="text-align: center;margin-top: 30px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);" width="70%" height="70%"  src="video/video1.mp4" controls></video>
+		</div>
+		<button onclick="down()" style="height: 25px;width: 60px;border-radius: 30px;margin: 0 0 0 15%;">上一集</button>
+		<button onclick="jump()" style="height: 25px;width: 60px;border-radius: 30px;margin: 0 0 0 3%;">下一集</button>
+		<button onclick="hua()" id="sakurasise" style="height: 25px;width: 60px;float: right;border-radius: 30px;margin: 0 15% 0 0;">樱花</button>
+		
+		
+		<!-- <audio id="bb" style="float: right;margin-top:110px ;width: 100%;"  controls="controls"loop="loop" 
+		src="Audio/…con lentitud poderosa.mp3" > -->
+		</div>
+		<script  src="js/樱花.js" ></script>
+		<script>
+			var s=document.getElementById("canvas_sakura");
+			var ss=document.getElementById("bb");
+			var sakurasise=document.getElementById("sakurasise");
+			var k = true;
+			
+			function hua(){
+			if(k){
+			sakurasise.innerHTML="开"
+			s.style.height="0px";
+			k=false;}
+			else{
+			sakurasise.innerHTML="关"
+			s.style.height="auto";
+			k=true;}
+			}
+			
+			// 跳转
+			function jump() {
+				window.location.href='video3.html';
+			}
+			
+			function down() {
+				window.location.href='bgm.html';
+			}
+			
+		</script>
+	</body>
+</html>
